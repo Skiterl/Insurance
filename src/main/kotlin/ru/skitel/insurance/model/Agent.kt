@@ -15,15 +15,15 @@ data class Agent (
     val agentId: UUID,
 
     @Column(name = "first_name")
-    val firstName: String,
+    val firstName: String?,
 
     @Column(name = "last_name")
-    val lastName: String,
+    val lastName: String?,
 
     @Email
     @Column(unique = true, nullable = false)
     val email: String,
 
-    val city: String,
-    val phone: String
+    val city: String?,
+    val phone: String?
 )
