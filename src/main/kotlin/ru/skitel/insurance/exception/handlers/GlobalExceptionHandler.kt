@@ -10,8 +10,9 @@ import ru.skitel.insurance.utils.mapper.ApplicationError
 @ControllerAdvice
 class GlobalExceptionHandler {
 
-    @ExceptionHandler
+    @ExceptionHandler(ResourceNotFoundException::class)
     fun catchResourceNotFoundException(exception: ResourceNotFoundException):ResponseEntity<ApplicationError>{
-        return ResponseEntity(ApplicationError(HttpStatus.NOT_FOUND.value(), exception.message), HttpStatus.NOT_FOUND)
+        val error = ApplicationError(HttpStatus.NOT_FOUND.value(), exception.message)
+        return ResponseEntity(error, HttpStatus.NOT_EXTENDED)
     }
 }
