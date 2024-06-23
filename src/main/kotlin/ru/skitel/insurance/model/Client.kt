@@ -15,14 +15,14 @@ data class Client(
     val clientId: UUID,
 
     @Column(name = "first_name")
-    val firstName: String,
+    var firstName: String?,
 
     @Column(name = "last_name")
-    val lastName: String,
-    val phone: String,
+    var lastName: String?,
+    var phone: String?,
 
     @Email
     @Column(unique = true, nullable = false)
     val email: String,
-    val city: String
+    var city: String?
 )

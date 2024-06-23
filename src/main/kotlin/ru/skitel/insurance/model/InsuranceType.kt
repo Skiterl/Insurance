@@ -16,9 +16,9 @@ data class InsuranceType(
 
     @NotNull
     @Column(nullable = false)
-    val name: String,
+    var name: String,
 
     @NotNull
     @Column(name = "insurance_rate", nullable = false)
-    val insuranceRate: Double
+    var insuranceRate: Double
 )
