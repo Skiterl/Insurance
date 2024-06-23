@@ -1,4 +1,4 @@
-package ru.skitel.insurance.utils.mapper
+package ru.skitel.insurance.exception
 
 data class ApplicationError(
     val statusCode: Int?,
