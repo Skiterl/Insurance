@@ -9,7 +9,6 @@ import java.util.*
 
 
 interface ClientService {
-
     fun findAll(): Iterable<Client>
     fun findById(id: UUID): Client
     fun save(clientDto: ClientCreateDto): Client
