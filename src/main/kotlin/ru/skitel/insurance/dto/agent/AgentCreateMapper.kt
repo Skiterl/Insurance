@@ -27,5 +27,4 @@ class AgentCreateMapper: Mapper<AgentCreateDto, Agent> {
             phone = dto.phone
         )
     }
-
 }
